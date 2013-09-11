@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Size controller</title>
+        <link rel="stylesheet" type="text/css" href="css/size-input.css">
+    </head>
+    
+    <body>
+        <button id="minus" class="sizeController sizeMinusButton sizeButton">-</button><input id="input" maxlength="3" type="phone" value="35" class="sizeController sizeInput" /><button id="pluss" class="sizeController sizePlusButton sizeButton">+</button>
+        <div style="margin-top: 40px;">Size is:
+            <span id="sizeText"></span>
+        </div>
+        
+        <script src="js/sizeController.js">
+            <!-- empty -->
+        </script>
+        
+        <script>
+            var el = function(id) {
+                return document.getElementById(id);
+            };
+
+            var sizeText = el('sizeText');
+            sizeText.textContent = 35;
+
+            var fontSizeController = new SizeController({
+                startValue: 35,
+                stepSize: 1,
+                min: 20,
+                max: 80,
+                input: el('input'),
+                minus: el('minus'),
+                plus: el('pluss'),
+                changeFn: function(value) {
+                    sizeText.textContent = value;
+                }
+            });
+        </script>
+    </body>
+
+</html>

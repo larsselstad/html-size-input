@@ -1,0 +1,39 @@
+.sizeController {
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;  
+    border: 1px solid #596677;
+    display: inline-block;
+    font-size: 1em;
+    height: 35px;
+    line-height: 1.3em;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.sizeInput {
+    width: 50px;
+    border-width: 1px 0;
+}
+
+.sizeButton {
+    background-color: #E74C3C;
+    font-size: 1.4em;
+    width: 35px;
+    box-shadow: inset 0 -1px 1px #B83C30;
+    font-weight: bold;
+    color: #323A45;
+}
+
+.sizeButton:active {
+    box-shadow: inset 0 1px 1px #872C23; 
+    background-color: #B83C30;   
+}
+
+.sizeMinusButton {
+    border-radius: 4px 0 0 4px;
+}
+
+.sizePlusButton {
+    border-radius: 0 4px 4px 0;
+}
